@@ -5,7 +5,10 @@ import { AllProductsComponent } from './products/components/all-products/all-pro
 import { ProductDetailsComponent } from './products/components/product-details/product-details.component';
 
 const routes: Routes = [
-
+  //add rouets 
+  { path: "products", component: AllProductsComponent },
+  { path: "details", component: ProductDetailsComponent },
+  { path: "cart", component: CartComponent }
 ];
 
 @NgModule({

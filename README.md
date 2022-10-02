@@ -1,6 +1,13 @@
 # Ap2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+**app creation**
+-> ng new ap-2
+-> ng g m products
+-> ng g c products/components/all-products
+-> ng g s products/services/products
+-> npm i --save  bootstrap@latest
+**
 
 ## Development server
 

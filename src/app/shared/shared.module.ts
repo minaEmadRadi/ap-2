@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { SelectComponent } from './components/select/select.component';
+import { Router, RouterModule } from '@angular/router';
 
 
 
@@ -11,7 +12,8 @@ import { SelectComponent } from './components/select/select.component';
     SelectComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     //export shared

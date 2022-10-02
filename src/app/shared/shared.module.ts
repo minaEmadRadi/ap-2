@@ -14,6 +14,7 @@ import { SelectComponent } from './components/select/select.component';
     CommonModule
   ],
   exports: [
+    //export shared
     HeaderComponent,
     SelectComponent
   ]

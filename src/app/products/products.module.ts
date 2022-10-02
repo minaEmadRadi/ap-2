@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser'
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
@@ -11,7 +12,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductDetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, BrowserModule
   ]
 })
 export class ProductsModule { }

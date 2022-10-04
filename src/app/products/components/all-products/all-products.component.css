@@ -1,0 +1,18 @@
+img {
+    height: 200px;
+}
+
+.title1 {
+    height: 100px;
+    overflow: hidden;
+}
+
+button {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+}

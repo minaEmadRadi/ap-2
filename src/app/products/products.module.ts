@@ -12,7 +12,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductDetailsComponent
   ],
   imports: [
-    CommonModule, BrowserModule
+    BrowserModule,
+    CommonModule,
+
   ]
 })
 export class ProductsModule { }

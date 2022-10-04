@@ -23,6 +23,22 @@ export class AllProductsComponent implements OnInit {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /** */
   isShow: boolean | undefined;
   topPosToStartShowing = 100;

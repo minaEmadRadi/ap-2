@@ -4,13 +4,15 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductComponent } from './components/product/product.component';
 
 
 
 @NgModule({
   declarations: [
     AllProductsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

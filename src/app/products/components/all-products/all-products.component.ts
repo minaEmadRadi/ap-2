@@ -8,11 +8,13 @@ import { ProductsService } from '../../services/products.service';
 })
 export class AllProductsComponent implements OnInit {
   products: any[] = [];
+  categories: any[] = [];
   //inject service
   constructor(private service: ProductsService) { }
 
   ngOnInit(): void {
-    this.getproducts()
+    this.getproducts();
+    this.getcategories();
   }
 
   getproducts() {
@@ -20,6 +22,26 @@ export class AllProductsComponent implements OnInit {
       error => {
         alert(error.message);
       })
+  }
+
+  getcategories() {
+    this.service.getAllCategories().subscribe((res: any) => { this.categories = res; console.log(res) },
+      error => {
+        alert(error.message);
+      })
+  }
+  getProductsCategory(value: string) {
+    this.service.getProductsByCategory(value).subscribe((res: any) => { this.products = res; console.log(res) },
+      error => {
+        alert(error.message);
+      })
+
+  }
+
+  detectChanges(event: any) {
+    let value = event.target.value;
+    (value == "all") ? this.getproducts() : this.getProductsCategory(value)
+
   }
 
 

@@ -11,4 +11,10 @@ export class ProductsService {
   getAllProducts() {
     return this._http.get(environment.baseApi + 'products');
   } // get products from data.json
+  getAllCategories() {
+    return this._http.get(environment.baseApi + 'products/categories');
+  } // get Categories from data.json
+  getProductsByCategory(value: string) {
+    return this._http.get(environment.baseApi + 'products/category/' + value);
+  } // get Categories from data.json
 }

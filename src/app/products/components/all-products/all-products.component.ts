@@ -38,7 +38,7 @@ export class AllProductsComponent implements OnInit {
 
   }
 
-  detectChanges(event: any) {
+  recievCategory(event: any) {
     let value = event.target.value;
     (value == "all") ? this.getproducts() : this.getProductsCategory(value)
 

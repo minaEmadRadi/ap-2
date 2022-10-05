@@ -9,6 +9,7 @@ import { ProductsService } from '../../services/products.service';
 export class AllProductsComponent implements OnInit {
   products: any[] = [];
   categories: any[] = [];
+  cartProduct: any[] = [];
   //inject service
   constructor(private service: ProductsService) { }
 
@@ -44,7 +45,22 @@ export class AllProductsComponent implements OnInit {
 
   }
 
+  addToCart(event: any) {
+    if ("cart" in localStorage) {
+      this.cartProduct = JSON.parse(localStorage.getItem("cart")!);//رجعه زي ما هو
+      let exist = this.cartProduct.find(x => x.id == event.id)
+      if (exist)
+        alert("exist")
+      else {
+        this.cartProduct.push(event);
+        localStorage.setItem("cart", JSON.stringify(this.cartProduct))// ابعته زي ما هو
+      }
+    } else {
+      this.cartProduct.push(event);
+      localStorage.setItem("cart", JSON.stringify(this.cartProduct))
+    }
 
+  }
 
 
 

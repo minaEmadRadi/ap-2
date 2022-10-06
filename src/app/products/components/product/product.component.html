@@ -1,20 +1,26 @@
 <div class="card box-shadow">
-    <!-- Product image-->
     <!--(click)="ProductSelectedDetails(product)" routerLink="/productItemDetail"-->
     <img class="img-thumbnail card-img-top " src="{{data.image}}" alt="product image for {{data.title}}" />
-    <!-- Product details-->
     <div class="card-body p-4">
         <div class="text-center title1">
-            <!-- Product name-->
             {{data.title}}
-            <!-- Product price-->
         </div>
+
+    </div>
+
+    <h3 class="pt-2">{{data.price.toFixed(2)}}.LE</h3>
+
+    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" *ngIf="addBtn">
         <div class="text-center">
-            {{data.price.toFixed(2)}}
+            <input type="number" min="1" max="10" class="form-control d-inline-flex mx-auto  text-center w-50"
+                value="data.amount" autocomplete="off">
+            <a class="btn btn-outline-dark d-inline-flex mt-auto" (click)="add()">add to cart</a>
         </div>
     </div>
-    <!-- Product actions-->
-    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center"><a class="btn btn-outline-dark mt-auto" (click)="add()">add to cart</a></div>
+    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" *ngIf="!addBtn" (click)="addBtn=true">
+        <div class="text-center">
+            <a class="btn btn-outline-dark mt-auto">add to cart</a>
+        </div>
     </div>
+
 </div>

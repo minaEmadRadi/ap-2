@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() data: any = {}
+  @Input() data: any = {};
   @Output() item = new EventEmitter();
-
+  addBtn: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

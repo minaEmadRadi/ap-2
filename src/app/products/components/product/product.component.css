@@ -3,8 +3,12 @@ img {
 }
 
 .title1 {
-    height: 100px;
+    height: 70px;
     overflow: hidden;
+}
+
+h3 {
+    text-align: center;
 }
 
 .box-shadow:hover {

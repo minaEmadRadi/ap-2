@@ -48,7 +48,7 @@ export class AllProductsComponent implements OnInit {
   addToCart(event: any) {
     if ("cart" in localStorage) {
       this.cartProduct = JSON.parse(localStorage.getItem("cart")!);//رجعه زي ما هو
-      let exist = this.cartProduct.find(x => x.id == event.id)
+      let exist = this.cartProduct.find(x => x.item.id == event.item.id)
       if (exist)
         alert("exist")
       else {

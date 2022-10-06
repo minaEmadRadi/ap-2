@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
   }
   add() {
     //  product.amount =this.amountSelected ;
-    this.item.emit(this.data);
+    this.item.emit({ item: this.data, quantity: this.amount });
   }
 
 }

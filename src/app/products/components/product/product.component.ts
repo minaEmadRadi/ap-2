@@ -9,6 +9,7 @@ export class ProductComponent implements OnInit {
   @Input() data: any = {};
   @Output() item = new EventEmitter();
   addBtn: boolean = false;
+  amount: Number = 0;
   constructor() { }
 
   ngOnInit(): void {

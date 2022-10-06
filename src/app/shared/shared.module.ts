@@ -5,6 +5,7 @@ import { SelectComponent } from './components/select/select.component';
 import { Router, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,12 +19,14 @@ import { BrowserModule } from '@angular/platform-browser';
     HttpClientModule,
     CommonModule,
     RouterModule,
+    FormsModule
 
   ],
   exports: [
     //export shared
     HeaderComponent,
-    SelectComponent
+    SelectComponent,
+    FormsModule
   ]
 
 

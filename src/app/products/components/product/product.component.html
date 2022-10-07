@@ -1,14 +1,17 @@
 <div class="card box-shadow">
     <!--(click)="ProductSelectedDetails(product)" routerLink="/productItemDetail"-->
-    <img class="img-thumbnail card-img-top " src="{{data.image}}" alt="product image for {{data.title}}" />
-    <div class="card-body p-4">
-        <div class="text-center title1">
-            {{data.title}}
+    <div routerLink="/details/{{data.id}}">
+        <img class="img-thumbnail card-img-top " src="{{data.image}}" alt="product image for {{data.title}}" />
+        <div class="card-body p-4">
+            <div class="text-center title1">
+                {{data.title}}
+            </div>
+
         </div>
 
+        <h3 class="pt-2">{{data.price.toFixed(2)}}.LE</h3>
     </div>
 
-    <h3 class="pt-2">{{data.price.toFixed(2)}}.LE</h3>
 
     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" *ngIf="addBtn">
         <div class="text-center">

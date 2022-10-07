@@ -7,7 +7,7 @@ import { ProductDetailsComponent } from './products/components/product-details/p
 const routes: Routes = [
   //add rouets 
   { path: "products", component: AllProductsComponent },
-  { path: "details", component: ProductDetailsComponent },
+  { path: "details/:id", component: ProductDetailsComponent },
   { path: "cart", component: CartComponent },
   { path: "**", redirectTo: "products", pathMatch: "full" }
 ];

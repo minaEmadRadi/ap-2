@@ -5,6 +5,7 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductComponent } from './components/product/product.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { ProductComponent } from './components/product/product.component';
   imports: [
     BrowserModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class ProductsModule { }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product',
@@ -6,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input() data: any = {};
+  @Input() data!: Product;
   @Output() item = new EventEmitter();
   addBtn: boolean = false;
   amount: Number = 1;

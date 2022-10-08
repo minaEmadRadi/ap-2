@@ -1,4 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Product } from '../../models/product';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
@@ -7,8 +8,8 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./all-products.component.css']
 })
 export class AllProductsComponent implements OnInit {
-  products: any[] = [];
-  categories: any[] = [];
+  products: Product[] = [];
+  categories: string[] = [];
   cartProduct: any[] = [];
   //inject service
   constructor(private service: ProductsService) { }
